@@ -1,0 +1,49 @@
+[
+    {
+        "id": "0x Protocol",
+        "name": "0x Protocol",
+        "token": "ZRX",
+        "price": 10,
+        "icon": "./cryptos/zrx.svg"
+    },
+    {
+        "id": "1inch",
+        "name": "1inch",
+        "token": "1INCH",
+        "price": 20,
+        "icon": "./cryptos/1inch.svg"
+
+    },
+    {
+        "id": "Aave",
+        "name": "Aave",
+        "token": "AAVE",
+        "price": 30,
+        "icon": "./cryptos/aave.svg"
+
+    },
+    {
+        "id": "AdEx",
+        "name": "AdEx",
+        "token": "ADX",
+        "price": 40,
+        "icon": "./cryptos/adx.svg"
+
+    },
+    {
+        "id": "AIOZ Network",
+        "name": "AIOZ Network",
+        "token": "AIOZ",
+        "price": 50,
+        "icon": "./cryptos/atlas.svg"
+
+    },
+    {
+        "id": "Ampleforth Governance",
+        "name": "Ampleforth Governance",
+        "token": "FORTH",
+        "price": 60,
+        "icon": "./cryptos/ampl.svg"
+
+    }
+]
