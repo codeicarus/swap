@@ -53,8 +53,8 @@ const CryptoSwap = () => {
                 open={isOpenFirstToken}
                 onClose={onClose}
                 setToken={({ token, icon, price }) => {
-                    setFirstTokenValue(firstTokenValue * firstToken?.price / price);
-                    setFirstToken({ token, icon, price });
+                    setSecondTokenValue(secondTokenValue * secondToken?.price / price);
+                    setSecondToken({ token, icon, price });
 
                 }}
             />
@@ -67,15 +67,14 @@ const CryptoSwap = () => {
                         size={5}
                         className="w-[200px] text-[30px] bg-transparent focus:outline-none"
                         value={firstTokenValue}
-                        style={{ WebkitAppearance: 'none', MozAppearance: 'textfield' }}
                         onChange={(e) => {
                             setFirstTokenValue(e.target.value);
                             setSecondTokenValue((e.target.value * firstToken?.price / secondToken?.price).toFixed(2))
                         }}
                     />
                     <div className="flex p-2 rounded-full bg-white font-medium text-[20px] hover: cursor-pointer hover:bg-gray-200" onClick={() => setIsOpenFirstToken(true)}>
-                        <img src={firstToken?.icon} alt="" />
-                        <div className="ml-2">{firstToken?.token}</div>
+                        <img src={secondToken?.icon} alt="" />
+                        <div className="ml-2">{secondToken?.token}</div>
                     </div>
                 </div>
             </div>
@@ -88,8 +87,8 @@ const CryptoSwap = () => {
                 open={isOpenSecondToken}
                 onClose={onClose}
                 setToken={({ token, icon, price }) => {
-                    setSecondTokenValue(secondTokenValue * secondToken?.price / price);
-                    setSecondToken({ token, icon, price });
+                    setFirstTokenValue(firstTokenValue * firstToken?.price / price);
+                    setFirstToken({ token, icon, price });
                 }}
             />
             <div className="w-full p-2 h-[120px] bg-gray-100 rounded-lg mb-2">
@@ -101,15 +100,15 @@ const CryptoSwap = () => {
                         size={5}
                         value={secondTokenValue}
                         className="w-[200px] text-[30px] bg-transparent focus:outline-none"
-                        onChange={(e) => {
-                            setSecondTokenValue(e.target.value);
-                            setFirstTokenValue((e.target.value * secondToken?.price / firstToken?.price))
-                        }}
+                        // onChange={(e) => {
+                        //     setSecondTokenValue(e.target.value);
+                        //     setFirstTokenValue((e.target.value * secondToken?.price / firstToken?.price))
+                        // }}
 
                     />
                     <div className="flex p-2 rounded-full bg-white font-medium text-[20px] hover: cursor-pointer hover:bg-gray-200" onClick={() => setIsOpenSecondToken(true)}>
-                        <img src={secondToken?.icon} alt="" />
-                        <div className="ml-2">{secondToken?.token}</div>
+                        <img src={firstToken?.icon} alt="" />
+                        <div className="ml-2">{firstToken?.token}</div>
                     </div>
                 </div>
             </div>
